@@ -11,7 +11,7 @@ if "maciek" in student:
 
 print("")
 
-utensils = {"fork","spoon","knife"}
+utensils = {"fork","spoon","knife"}      #To taka lista tylko odrazu segreguje jak mapa w c++ i usuwa powtarzające się elementy
 dishes = {"bowl","plate","cup","knife"}
 utensils.add("napkin")
 utensils.remove("fork")
