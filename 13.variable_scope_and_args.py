@@ -7,7 +7,7 @@ def display_name():
 display_name()
 print(name)
 
-def sumnumber(*args):    #*args to funckja która przymuję nieograniczoną ilość argumentów, jest tablicą
+def sumnumber(*args):    #*args to funckja która przymuję nieograniczoną ilość argumentów, jest krotką
     i = 0
     args = list(args)
     args[0] = 0
