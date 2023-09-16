@@ -9,9 +9,10 @@ def fileread():
             computerscore = file.readline()
     except FileNotFoundError:
         print("FileNotFoundError.")
-    tuple = [userscore,computerscore]
-    print(f"Hey, welcome on rock, paper, scissors game!\nYou're score vs Computer score: {userscore} - {computerscore}\n"
-          "Let's start!")
+    print("Hey, welcome on rock, paper, scissors game!\n"
+          f"You're score vs Computer score: {userscore.strip()} - {computerscore}\n"
+           "Let's start!")
+    tuple = [userscore, computerscore]
     return tuple
 
 def start():
@@ -24,6 +25,7 @@ def computerchoice():
     return choice
 
 def game(userchoice,computerchoice,score):
+
     uscore = int(score[0])
     cscore = int(score[1])
     winmessage = "You win :)\nLet's play again!"
@@ -70,7 +72,7 @@ def game(userchoice,computerchoice,score):
             for secounds in range(3):
                 time.sleep(1)
                 print(".", end="")
-            print(" The computer chose: ROCK!\n" + drawmessage)
+            print(" The computer chose: Paper!\n" + drawmessage)
             uscore += 1
             cscore += 1
 
@@ -79,7 +81,7 @@ def game(userchoice,computerchoice,score):
             for secounds in range(3):
                 time.sleep(1)
                 print(".", end="")
-            print(" The computer chose: ROCK!\n" + losemessage)
+            print(" The computer chose: Scissors!\n" + losemessage)
             cscore += 1
 
     elif userchoice == 3:
@@ -96,7 +98,7 @@ def game(userchoice,computerchoice,score):
             for secounds in range(3):
                 time.sleep(1)
                 print(".", end="")
-            print(" The computer chose: ROCK!\n" + winmessage)
+            print(" The computer chose: Paper!\n" + winmessage)
             uscore += 1
 
         else:
@@ -104,7 +106,7 @@ def game(userchoice,computerchoice,score):
             for secounds in range(3):
                 time.sleep(1)
                 print(".", end="")
-            print(" The computer chose: ROCK!\n" + drawmessage)
+            print(" The computer chose: Scissors!\n" + drawmessage)
             uscore += 1
             cscore += 1
 
@@ -116,3 +118,8 @@ def savetofile(score):
 
     with open(path,"w") as file:
          file.write(f"{score[0]}\n{score[1]}")
+    flag = input("Do you want to play again?(Type yes or no): ").lower()
+    if flag == "yes":
+        return True
+    else:
+        return False

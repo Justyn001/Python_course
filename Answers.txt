@@ -1,0 +1,8 @@
+Guido van Rossum
+Elon Musk
+Bill Gates
+Mark Zuckerburg
+Yes
+No
+Maybe
+Sometimes
