@@ -1,4 +1,8 @@
 Who created Python?
 A
 Is earth flat?
-A
+B
+Python is tributed to which comedy group?
+C
+What year was python created?
+B

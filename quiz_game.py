@@ -32,13 +32,28 @@ def read_answers(dictionary):
 
 def start_game(dictionary,answers):
     x = 0
-    while x != 1:
-        for keys, values in dictionary.items():
-            print(keys)
-            for i in range(4):
-                print(answers[x][i])
+    y = "ABCD"
+    useranswerlist =[]
+    for keys, values in dictionary.items():
+        print(keys)
+        for i in range(4):
+            print(y[i] + ". " + answers[x][i])
+        useranswer = input("Type in (A, B, C or D): ").capitalize()
+        print("--------------------")
+        if useranswer == values:
+            print("CORRECT.")
             x += 1
+        else:
+            print("INCORRECT.")
+        print("--------------------")
+        useranswerlist.append(useranswer)
+    print("Results\n--------------------\nGuesses: ",end="")
+    for answers in useranswerlist:
+        print(answers,end=" ")
+    print("\nAnswers: ",end = "")
+    for values in dictionary.values():
+        print(values,end = " ")
+    percent = int((x/4)*100)
+    print("\nYour score: {}%.".format(percent))
 
-i = read_questions()
-j = read_answers(i)
-start_game(i,j)
+    #DODAJ TUTAJ LOSOWANIE PYTAN
