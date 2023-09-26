@@ -42,9 +42,8 @@ for i in user:
 
 login_data = ["25/09/2023", "22/09/2023", "21/09/2023"]
 
-user = zip(login,password,login_data)
-for i in user:
-    print(i)
+user = list(zip(login,password,login_data))
+print(user[0][0])
 
 
 
