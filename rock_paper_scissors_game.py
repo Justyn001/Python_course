@@ -119,7 +119,7 @@ def savetofile(score):
     with open(path,"w") as file:
          file.write(f"{score[0]}\n{score[1]}")
     flag = input("Do you want to play again?(Type yes or no): ").lower()
-    if flag == "yes":
-        return True
-    else:
+    if flag == "no":
         return False
+    else:
+        return True

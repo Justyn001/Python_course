@@ -31,6 +31,7 @@ def read_answers(dictionary):
     return answers2d
 
 def start_game(dictionary,answers):
+    p = 0
     x = 0
     y = "ABCD"
     useranswerlist =[]
@@ -43,8 +44,10 @@ def start_game(dictionary,answers):
         if useranswer == values:
             print("CORRECT.")
             x += 1
+            p += 1
         else:
             print("INCORRECT.")
+            x += 1
         print("--------------------")
         useranswerlist.append(useranswer)
     print("Results\n--------------------\nGuesses: ",end="")
@@ -53,7 +56,7 @@ def start_game(dictionary,answers):
     print("\nAnswers: ",end = "")
     for values in dictionary.values():
         print(values,end = " ")
-    percent = int((x/4)*100)
+    percent = int((p/4)*100)
     print("\nYour score: {}%.".format(percent))
 
     #DODAJ TUTAJ LOSOWANIE PYTAN

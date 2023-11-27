@@ -1,6 +1,6 @@
 age = int(input("Ile masz lat: "))
 
-if age == 100:
+if age  == 100:
     print("Jesteś już seniorem!")
 elif age >= 18:
     print("Jesteś dorosły.")
