@@ -22,7 +22,7 @@ scale.set((scale["from"] - scale["to"])/2 + scale["to"])        # Ustawia na jak
 coldimage = PhotoImage(file='cold.png')
 coldlabel = Label(image=coldimage)
 
-hotimage = PhotoImage(file='hot.png')
+hotimage = PhotoImage(file='cold.png')
 hotlabel = Label(image=hotimage)
 
 def action():
