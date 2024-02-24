@@ -14,7 +14,7 @@ def click() -> None:
     #filepath = filedialog.askopenfilename(initialdir="D:\\Repozytoria\\PycharmProjects",    # To działa tak samo jak ta wersja u góry tylko dajemy ścieżkę gdzie ma się otworzyć okno w wyborem pliku
     #                                      title="open file ok?",                             # Tytuł okna ( w lewym górnym rogu)
     #                                      filetypes=(("text files","*.txt"),("all files","*.*")),  # Ramka w prawym dolnym rogu określa jakiego typu pliki mają być widoczne
-    #                                      )
+    #                                      )                                                        # "text files" to nazwa jaka ma się wyświetlać a *.txt to typ pliku(*.* to typ dowolny)
 
 button = Button(text="click me", command=click)
 
